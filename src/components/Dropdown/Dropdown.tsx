@@ -18,7 +18,9 @@ const Dropdown : React.FC<IDropdownProps> = ({initialValue, items, selected, onS
                         return (
                             <li 
                                 key={"a" + el.id} 
-                                onClick={onSelect}>
+                                onClick={onSelect}
+                                role="list"
+                                >
                                 {el.name}
                             </li>
                         )
