@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# rm test
+*.test.*
+src/__test__
+__snapshots__
