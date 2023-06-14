@@ -2,11 +2,12 @@ import React from "react";
 
 interface IButtonProps {
     name : string;
-}
+    onClick : () => void;
+}   
 
-const Button : React.FC<IButtonProps> = ({name}) => {
+const Button : React.FC<IButtonProps> = ({name, onClick}) => {
     return (
-        <button>{name}</button>
+        <button data-testid="test-btn" onClick={onClick}>{name}</button>
     )
 }
 

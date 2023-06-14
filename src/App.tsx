@@ -1,14 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import Button from "./components/Button/Button";
-import Link from "./components/Link/Link";
+
 function App() {
+  const [name, setName] = useState<string>("");
+
+  const onClick = () => {
+    setName("Button1");
+  }
 
   return (
     <div>
-      <Link page="/">Facebook</Link>
-      <Button name={"Hi"}/>
+      <Button name={name} onClick={onClick} />
     </div>
   )
 }
 
-export default App
+export default App;
