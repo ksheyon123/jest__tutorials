@@ -12,30 +12,26 @@ const Accordion : React.FC<IAccordionProps> = ({initialValue, items, selected, o
     const hasItems = items.length > 0;
     return (
         <div>
-            <div 
-                data-testid="test-accordion"
-                onClick={() => setToggle(prev => !prev)}
-                >
+            <div data-testid="test-accordion" onClick={() => setToggle(prev => !prev)}>
                 {selected || initialValue}
             </div>
-            {(hasItems && toggle) && (
-                <ul>
-                    {items.map((el) => {
-                        return (
-                            <li 
-                                key={"a" + el.id} 
-                                onClick={() => {
-                                    onSelect(el);
-                                    setToggle(false);
-                                }}
-                                role="list"
-                                >
-                                {el.name}
-                            </li>
-                        )
-                    })}
-                </ul>
-            )}
+            <ul role="list">
+            {(hasItems && toggle) && items.map((el) => {
+                const key = "option" + el.id;
+                return (
+                    <option 
+                        selected={el.name === selected}
+                        key={key} 
+                        onClick={(el) => {
+                            onSelect(el);
+                            setToggle(prev => !prev);
+                        }}
+                        data-testid={key}
+                        >
+                        {el.name}
+                    </option>
+                )})}
+            </ul>
         </div>
     )
 }
