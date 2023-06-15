@@ -20,7 +20,6 @@ const Accordion : React.FC<IAccordionProps> = ({initialValue, items, selected, o
                 const key = "option" + el.id;
                 return (
                     <option 
-                        selected={el.name === selected}
                         key={key} 
                         onClick={(el) => {
                             onSelect(el);
