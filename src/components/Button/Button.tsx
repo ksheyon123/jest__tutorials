@@ -7,7 +7,7 @@ interface IButtonProps {
 
 const Button : React.FC<IButtonProps> = ({name, onClick}) => {
     return (
-        <button data-testid="test-btn" onClick={onClick}>{name}</button>
+        <button data-testid="btn" onClick={onClick}>{name}</button>
     )
 }
 

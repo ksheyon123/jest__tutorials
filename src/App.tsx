@@ -1,15 +1,19 @@
-import React from "react";
-import Accordion from "./components/Accordion/Accordion";
+import React, { useEffect } from "react";
 
-const items = [{id : 1, name : "1"}, {id : 2, name : "2"}];
-const initialValue = "Select";
-function App() {
+const App = () => {
+  return <Child />;
+};
 
-  return (
-    <div>
-      <Accordion items={items} initialValue={initialValue} selected="" onSelect={() => {}}/>
-    </div>
-  )
-}
+const Child = () => {
+  console.log("RENDER");
+
+  useEffect(() => {
+    console.log("EFFECT");
+  }, []);
+
+  console.log("RETURN");
+
+  return <div>Hello world</div>;
+};
 
 export default App;
