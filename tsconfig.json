@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
+    // "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ES2015",
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
@@ -19,10 +18,10 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
+    // "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }],
+  "include": ["src"]
+  // "references": [{ "path": "./tsconfig.node.json" }],
 }

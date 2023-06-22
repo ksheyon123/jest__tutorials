@@ -1,19 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
+import {} from "@persian-tools/persian-tools";
 
 const App = () => {
-  return <Child />;
-};
 
-const Child = () => {
-  console.log("RENDER");
-
-  useEffect(() => {
-    console.log("EFFECT");
-  }, []);
-
-  console.log("RETURN");
-
-  return <div>Hello world</div>;
+  return (
+    <div>Hello World</div>
+  ) ;
 };
 
 export default App;
